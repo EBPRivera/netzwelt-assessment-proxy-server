@@ -14,9 +14,11 @@ app.use(express.json());
 
 // Routes
 const authRouter = require("./routes/auth");
+const territoriesRouter = require("./routes/territories");
 
 // Routing
 app.use("/account", authRouter);
+app.use("/territories", territoriesRouter);
 
 app.listen(PORT, () => {
   console.log(`Server is running on port: ${PORT}`);
